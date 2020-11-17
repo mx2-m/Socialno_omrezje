@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="icr.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:icr"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="UserControlDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+    <Grid  Style="{StaticResource ResourceKey=grid}" >
+        
+       
+            <ListBox Name="list">
+            <ListBoxItem>
+
+
+                <DockPanel Style="{StaticResource ResourceKey=dock}">
+
+                    <Border Style="{StaticResource ResourceKey=border}">
+
+                        <TextBlock Name="user" Text="{Binding ObjavaUser}" Style="{StaticResource ResourceKey=objekti}"/>
+                       
+                    </Border>
+                    
+                    <TextBlock Text="Lokacija: " FontSize="20" Grid.Row="0"/>
+
+                    <Border Style="{StaticResource ResourceKey=border}">
+
+                        <TextBlock Name="lokacija" Text="{Binding ObjavaLokacija}" Style="{StaticResource ResourceKey=objekti}"/>
+                            </Border>
+
+                    <Border Style="{StaticResource ResourceKey=border}">
+
+                        <TextBlock Name="prijatelj" Text="{Binding ObjavaPrijatelji}" Style="{StaticResource ResourceKey=objekti}"/>
+                            
+                    </Border>
+                    <Border Style="{StaticResource ResourceKey=border}">
+                                <Image Source="{Binding ObjavaSlika}" Width="300" Grid.Row="1" HorizontalAlignment="Center"/>
+                            </Border>
+                    <Border Style="{StaticResource ResourceKey=border}">
+                        <TextBlock Name="vsebina"  Text="{Binding ObjavaVsebina}" Style="{StaticResource ResourceKey=blok}"/>
+                            </Border>
+                            <TextBlock Text="Stopnja zasebnosti: " FontSize="20" Grid.Row="0"/>
+                    <Border Style="{StaticResource ResourceKey=border}">
+                                <TextBlock Name="zasebnost" Text="{Binding ObjavaZasebnost}" FontSize="20" Grid.Row="2" TextWrapping="Wrap"/>
+                            </Border>
+                            <Separator/>
+                
+                </DockPanel>
+
+            </ListBoxItem>
+        </ListBox>
+       
+        <WrapPanel>
+            <Button Content="Odstrani" Style="{StaticResource ResourceKey=button}"  Click="Odstrani"/>
+            <Button Content="Uredi" Style="{StaticResource ResourceKey=button}"  
+                    Click="Uredi"/>
+        </WrapPanel>
+    </Grid>
+
+
+
+
+
+   
+    
+</UserControl>

@@ -1,0 +1,346 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:icr"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="icr.MainWindow"
+        mc:Ignorable="d"
+        Title="Socialno omrezje" Height="450" Width="800">
+    
+    
+    <Window.Resources>
+        <ResourceDictionary Source="MainDictionary.xaml"/>
+    </Window.Resources>
+    
+    <Grid >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="257*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="210*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="216*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
+        
+
+        <Menu Grid.ColumnSpan="11" Background="CornflowerBlue" x:Name="menu" Grid.Column="0" Margin="-34,0,-68,-58" Grid.RowSpan="3"  >
+
+            <Label x:Name="lbl" Foreground="Black" FontSize="30" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Label>
+
+            <Border Grid.Column="0" Style="{StaticResource ResourceKey=border}" >
+                <Image Grid.Column="0" x:Name="profilna"  Source="Images/Tulips.jpg" RenderTransformOrigin="0.706,0.516" Margin="20,-16,-25,-15"/>
+            </Border>
+            <MenuItem  Header="Socialno omrezje" Style="{StaticResource ResourceKey=menui}"  RenderTransformOrigin="1.132,0.557" >
+                <MenuItem Header="Dodaj" Name="izv" Click="MenuItem_Objavi_Click" />
+                <MenuItem Header="Izhod"  Click="MenuItem_Click" />
+                <MenuItem Header="Uvozi"  Click="Uvezi_Click" />
+                <MenuItem Header="Izvozi"  Click="Izvezi_Click" />
+
+            </MenuItem>
+        </Menu>
+
+
+
+        <TabControl Margin="10,98,23.665,-28" TabStripPlacement="Top" Background="AliceBlue" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="8" Grid.RowSpan="3">
+            <TabItem x:Name="Zid" Header="Zid" Style="{StaticResource ResourceKey=tab}"  >
+                
+                <ScrollViewer Grid.Column="0" Grid.ColumnSpan="4"  Grid.Row="4">
+                    
+
+                   <StackPanel>
+                        
+                      <ItemsControl x:Name="Objava">
+                        <ItemsControl.ItemTemplate >
+                                
+                                <DataTemplate>
+
+                                    
+                                    <local:UserControl1 >
+                                      
+                                    </local:UserControl1>
+                                   
+                                </DataTemplate>
+                                   
+                                </ItemsControl.ItemTemplate>
+                           
+                        </ItemsControl>
+                          
+             
+                </StackPanel>
+                </ScrollViewer>
+               
+            </TabItem>
+
+            <TabItem Header="O meni" Style="{StaticResource ResourceKey=tab}">
+                <ScrollViewer Grid.Column="0" Grid.ColumnSpan="10"  Grid.Row="10" Margin="0,0,0,30">
+                    <StackPanel>
+
+                        <TextBlock Text="Basic Information" Style="{StaticResource ResourceKey=textb2}"/>
+
+                        <TextBlock Text="Ime:" Style="{StaticResource ResourceKey=textb}" />
+                        <TextBox x:Name="ime" Margin="5"
+                                  Text="{Binding UserIme}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled}"/>
+                       <TextBlock Text="Priimek:" Style="{StaticResource ResourceKey=textb}" />
+                        <TextBox x:Name="priimek" Margin="5"
+                                  Text="{Binding UserPriimek}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled}"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <CheckBox x:Name="chkEnabled" Content="Spremeni" />
+                        </StackPanel>
+
+
+
+                        <TextBlock  Text="Sex:" Style="{StaticResource ResourceKey=textb}" />
+                        <TextBox x:Name="spol" Margin="5"
+                                  Text="{Binding UserSpol}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled1}"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <CheckBox x:Name="chkEnabled1" Content="Spremeni" />
+                        </StackPanel>
+
+                        <TextBlock Text="Personal Information" Style="{StaticResource ResourceKey=textb2}"/>
+                        <TextBlock Text="About me: " Style="{StaticResource ResourceKey=textb}"  />
+                        <TextBox x:Name="aboutme" Margin="5"
+                                  Text="{Binding UserVsebina}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled2}"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <CheckBox x:Name="chkEnabled2" Content="Spremeni" />
+                        </StackPanel>
+
+
+
+
+                        <TextBlock Text="Education and Work" Style="{StaticResource ResourceKey=textb2}"/>
+
+                        <TextBlock Text="College: " Style="{StaticResource ResourceKey=textb}" />
+                        <TextBox x:Name="college" Margin="5"
+                                  Text="{Binding UserCollege}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled4}"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <CheckBox x:Name="chkEnabled4" Content="Spremeni" />
+                        </StackPanel>
+
+
+
+                        <TextBlock Text="High School:   " Style="{StaticResource ResourceKey=textb}" />
+                        <TextBox x:Name="highschool" Margin="5"
+                                  Text="{Binding UserHighS}"
+                                  TextWrapping="Wrap"
+                                  VerticalScrollBarVisibility="Auto"
+                               IsEnabled="{Binding IsChecked, ElementName=chkEnabled5}"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <CheckBox x:Name="chkEnabled5" Content="Spremeni" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+
+            </TabItem>
+
+
+
+            <TabItem Name="pp" Header="Prijatelji" Style="{StaticResource ResourceKey=tab}">
+
+                <StackPanel Orientation="Horizontal" RenderTransformOrigin="0.651,0.443" Margin="0,0,0,-3">
+                    <Button Name="dugme" Style="{StaticResource ResourceKey=button2}"  Content="Dodaj prijatelja"  RenderTransformOrigin="2.268,0.636" Click="Button_Dodaj" >
+
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <StringAnimationUsingKeyFrames 
+                Storyboard.TargetName="dugme" Storyboard.TargetProperty="(Button.Content)"
+                Duration="0:0:8" FillBehavior="HoldEnd">
+
+                                      
+                                            <DiscreteStringKeyFrame Value="" KeyTime="0:0:0" />
+                                            <DiscreteStringKeyFrame Value="D" KeyTime="0:0:1" />
+                                            <DiscreteStringKeyFrame Value="Do" KeyTime="0:0:1.5" />
+                                            <DiscreteStringKeyFrame Value="Dod" KeyTime="0:0:2" />
+                                            <DiscreteStringKeyFrame Value="Doda" KeyTime="0:0:2.5" />
+                                            <DiscreteStringKeyFrame Value="Dodan" KeyTime="0:0:3" />
+                       
+                                        </StringAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    
+                    <Button Name="odstrani"  Style="{StaticResource ResourceKey=button2}"  Content="Odstrani prijatelja" RenderTransformOrigin="-1.666,0.591" Click="Button_Odstrani">
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <StringAnimationUsingKeyFrames 
+                Storyboard.TargetName="odstrani" Storyboard.TargetProperty="(TabItem.Content)"
+                Duration="0:0:8" FillBehavior="HoldEnd">
+
+                                            <DiscreteStringKeyFrame Value="" KeyTime="0:0:0" />
+                                            <DiscreteStringKeyFrame Value="O" KeyTime="0:0:1" />
+                                            <DiscreteStringKeyFrame Value="Od" KeyTime="0:0:1.5" />
+                                            <DiscreteStringKeyFrame Value="Ods" KeyTime="0:0:2" />
+                                            <DiscreteStringKeyFrame Value="Odst" KeyTime="0:0:2.5" />
+                                            <DiscreteStringKeyFrame Value="Odstr" KeyTime="0:0:3" />
+                                            <DiscreteStringKeyFrame Value="Odstra" KeyTime="0:0:3.5" />
+                                            <DiscreteStringKeyFrame Value="Odstranj" KeyTime="0:0:4" />
+                                            <DiscreteStringKeyFrame Value="Odstranje" KeyTime="0:0:4.5" />
+                                            <DiscreteStringKeyFrame Value="Odstranjen " KeyTime="0:0:5" />
+                       
+                                        </StringAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    <ScrollViewer Grid.Column="0" Grid.ColumnSpan="4"  Grid.Row="4">
+                        <ListView ItemsSource="{Binding SourceCollection}" Name="List" Style="{StaticResource ResourceKey=lv}" RenderTransformOrigin="0.947,0.517" Margin="4,0" Width="588">
+
+                            <ListView.View>
+
+
+                                <GridView>
+                                    <GridViewColumn Header="Ime in priimek" Width="180" DisplayMemberBinding="{Binding PrijateljIme}" >
+
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding PrijateljIme}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Spol" Width="120" DisplayMemberBinding="{Binding PrijateljSpol}" >
+
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding PrijateljSpol}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="About" Width="120" DisplayMemberBinding="{Binding About}" >
+
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding About}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                               
+
+                                <GridViewColumn Header="Rojstni dan" Width="120" DisplayMemberBinding="{Binding RD}" >
+
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding RD}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                </GridView>
+
+                            </ListView.View>
+
+
+
+
+
+                        </ListView>
+                        
+                    </ScrollViewer>
+
+                    <ComboBox  Text="Sortiranje" MouseDoubleClick="klik" x:Name="ComboBox"  Style="{StaticResource ResourceKey=combo}"  RenderTransformOrigin="-1.359,1.809" >
+                        <ComboBoxItem Style="{StaticResource ResourceKey=cb}" Content="Ascending"/>
+                        <ComboBoxItem Style="{StaticResource ResourceKey=cb}" Content="Descending"/>
+
+                    </ComboBox>
+
+
+                    <StackPanel Orientation="Vertical" />
+                    <TextBox  Style="{StaticResource ResourceKey=tb}" Name="txtFilter" TextChanged="txtFilter_TextChanged"/>
+                    
+                    
+                </StackPanel>
+
+            </TabItem>
+            
+            
+            <TabItem Header="Slike" Style="{StaticResource ResourceKey=t}">
+                <ScrollViewer Grid.Column="0" Grid.ColumnSpan="4"  Grid.Row="4">
+                    <Grid>
+
+
+                        <ListBox  Name="slike" Background="LightBlue"  >
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Name="img4" Height="250" Width="220" VerticalAlignment="Top" Source="{Binding ObjavaSlika}" />
+                                </DataTemplate>
+
+
+                            </ListBox.ItemTemplate>
+
+
+                            </ListBox>
+
+
+
+
+
+
+
+
+
+
+
+                    </Grid>
+                </ScrollViewer>
+
+
+
+
+
+
+            </TabItem>
+
+
+
+            
+
+
+
+        </TabControl>
+
+
+
+    </Grid>
+</Window>

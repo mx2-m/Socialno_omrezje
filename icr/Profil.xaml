@@ -1,0 +1,54 @@
+﻿<Window x:Class="icr.Profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:icr"
+        mc:Ignorable="d"
+        Title="Profil" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary Source="ProfilDictionary.xaml"/>
+    </Window.Resources>
+
+
+
+    <Grid Style="{StaticResource ResourceKey=boja2}">
+
+        <StackPanel>
+            <TextBlock Text="Ime in priimek: " Style="{StaticResource ResourceKey=textb}"/>
+            <TextBox Name="imep" Style="{StaticResource ResourceKey=tbox}"  />
+            <TextBlock Text="Priimek: " Style="{StaticResource ResourceKey=textb}"/>
+            <TextBox Name="primek" Style="{StaticResource ResourceKey=tbox}"  />
+
+            <TextBlock Text="High school: " Style="{StaticResource ResourceKey=textb}"/>
+            <TextBox Name="highs" Style="{StaticResource ResourceKey=tbox}"  />
+
+            <TextBlock Text="College: " Style="{StaticResource ResourceKey=textb}"/>
+            <TextBox Name="college" Style="{StaticResource ResourceKey=tbox}"  />
+
+
+            <TextBlock Text="About: " Style="{StaticResource ResourceKey=textb}"/>
+            <TextBox Name="about" Background="AliceBlue" Text="  " Height="50" Margin="0,0,444,0" />
+            <TextBlock  Foreground="Black"  FontWeight="Bold" Text="Spol" Margin="10,10,627,10"/>
+            <ComboBox Name="spol"   Background="LightBlue"   VerticalAlignment="Top" Height="26" RenderTransformOrigin="-1.359,1.809" Margin="0,0,669,0" >
+                <ComboBoxItem  Name="muski"  Style="{StaticResource ResourceKey=boja1}" Content=" Muski"></ComboBoxItem>
+                <ComboBoxItem Name="zenski" Style="{StaticResource ResourceKey=boja1}" Content=" Zenski"></ComboBoxItem>
+
+            </ComboBox>
+
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Add" IsDefault="True" Style="{StaticResource ResourceKey=button}" Click="Button_Click_1" />
+                <Button Content="Cancel" IsCancel="True" Style="{StaticResource ResourceKey=button}"/>
+            </StackPanel>
+
+            </StackPanel>
+
+
+
+
+
+
+    </Grid>
+</Window>
