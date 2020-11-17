@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserStruktura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <UserIme> Minela</UserIme>
+    <UserPriimek> Macanovic</UserPriimek>
+    <UserHighS>Gimnazija </UserHighS>
+    <UserCollege>UM</UserCollege>
+    <UserVsebina>Život je palačinka s čokoladom</UserVsebina>
+    <UserSpol> Famale</UserSpol>
+  </User>
+  <Objave>
+    <Objava>
+      <ObjavaUser>Minela</ObjavaUser>
+      <ObjavaSlika>C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg</ObjavaSlika>
+      <ObjavaVsebina>dassaadssasadsdsaassasassdassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+
+</ObjavaVsebina>
+    </Objava>
+    <Objava>
+      <ObjavaUser>Minela</ObjavaUser>
+      <ObjavaSlika>C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg</ObjavaSlika>
+      <ObjavaVsebina>dassaadssasadsdsaassasassdassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+dassaadssasadsdsaassasass
+
+</ObjavaVsebina>
+    </Objava>
+    <Objava>
+      <ObjavaUser>Minela</ObjavaUser>
+      <ObjavaSlika>C:\Users\Public\Pictures\Sample Pictures\Desert.jpg</ObjavaSlika>
+      <ObjavaVsebina>wat
+</ObjavaVsebina>
+    </Objava>
+  </Objave>
+  <Prijatelji>
+    <Prijatelj>
+      <PrijateljIme>Edgar Linton</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+    <Prijatelj>
+      <PrijateljIme>Nelly Dean</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Lockwood</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Hareton Earnshaw</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Linton Heathcliff</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Hindley Earnshaw</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Isabella Linton</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Mr. Earnshaw</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Frances Earnshaw </PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Catherine</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Heathcliff</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Young Catherine</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Isabella Linton</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Mr. Earnshaw</PrijateljIme>
+      <PrijateljSpol> Muski</PrijateljSpol>
+    </Prijatelj>
+	<Prijatelj>
+      <PrijateljIme>Mrs. Earnshaw</PrijateljIme>
+      <PrijateljSpol> Zenski</PrijateljSpol>
+    </Prijatelj>
+  </Prijatelji>
+</UserStruktura>
