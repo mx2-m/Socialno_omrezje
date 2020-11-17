@@ -1,2 +1,2 @@
 # Socialno_omrezje
-UI rađen na predmetu Interakcija covjek racunar
+UI rađen na predmetu Interakcija covjek racunar.
