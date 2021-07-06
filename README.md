@@ -1,2 +1,5 @@
-# Socialno_omrezje
-UI rađen na predmetu Interakcija covjek racunar.
+# Social network
+User interfece for social network like app
+
+## Demo
+
